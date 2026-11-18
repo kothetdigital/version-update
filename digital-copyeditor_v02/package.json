@@ -1,0 +1,33 @@
+{
+  "name": "ko-thet-digital-copy-editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "proxy": "node server/provider-proxy.mjs",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "security:scan": "node scripts/check-secrets.mjs",
+    "check": "pnpm security:scan && pnpm format:check && tsc -b && vitest run && vite build",
+    "format": "prettier --write src extension server scripts docs private.example .github README.md SECURITY.md vite.config.ts vitest.config.ts *.json",
+    "format:check": "prettier --check src extension server scripts docs private.example .github README.md SECURITY.md vite.config.ts vitest.config.ts *.json"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "prettier": "^3.10.1",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vitest": "^5.1.0"
+  }
+}

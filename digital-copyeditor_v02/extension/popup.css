@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Pyidaungsu";
+  src: url("fonts/Pyidaungsu-2.5.3_Bold.ttf") format("truetype");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  font-family:
+    "Pyidaungsu",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f6f8fb;
+  color: #14243a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+}
+
+.popup {
+  padding: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1b3b60;
+}
+
+.brand-mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 3px 8px rgb(27 59 96 / 16%);
+}
+
+.brand strong,
+.brand span {
+  display: block;
+}
+
+.brand strong {
+  font-size: 15px;
+}
+
+.brand div span {
+  color: #617086;
+  font-size: 11px;
+}
+
+.intro {
+  margin: 16px 0;
+  color: #43546a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+label,
+summary {
+  color: #1b3b60;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #c8d1dc;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  outline: none;
+}
+
+textarea,
+input {
+  padding: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  padding: 8px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #b7882c;
+  box-shadow: 0 0 0 3px rgb(183 136 44 / 18%);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.primary {
+  background: #1b3b60;
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid #b7c2cf;
+  background: #fff;
+  color: #1b3b60;
+}
+
+details {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #dfe5eb;
+}
+
+details input {
+  margin-bottom: 8px;
+}
+
+.status {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: #53657a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.status.error {
+  color: #a23535;
+}

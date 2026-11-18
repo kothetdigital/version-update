@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Ko Thet Digital Copy Editor",
+  "description": "Send selected Myanmar text to Ko Thet Digital Copy Editor for proofreading.",
+  "version": "0.1.0",
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "icons": {
+    "16": "primary-logo.png",
+    "48": "primary-logo.png",
+    "128": "primary-logo.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Ko Thet Copy Editor",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "primary-logo.png",
+      "48": "primary-logo.png"
+    }
+  }
+}

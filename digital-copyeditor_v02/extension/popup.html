@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ko Thet Copy Editor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="brand">
+        <img src="primary-logo.png" alt="" class="brand-mark" />
+        <div>
+          <strong>Ko Thet</strong>
+          <span>Digital _ Copy Editor</span>
+        </div>
+      </header>
+
+      <p class="intro">Chrome ထဲက ရွေးထားသော မြန်မာစာကို စစ်ဆေးပြင်ဆင်ပါ။</p>
+
+      <label for="source">စစ်ဆေးလိုသော စာသား</label>
+      <textarea id="source" rows="7" placeholder="စာသားကို ထည့်ပါ သို့မဟုတ် လက်ရှိစာမျက်နှာမှ ရယူပါ။"></textarea>
+
+      <div class="row">
+        <label for="style">ရေးဟန်</label>
+        <select id="style">
+          <option value="SPOKEN">အပြော</option>
+          <option value="WRITTEN">အရေး</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="capture" class="secondary" type="button">ရွေးထားသောစာ ရယူရန်</button>
+        <button id="open" class="primary" type="button">Editor တွင်ဖွင့်ရန်</button>
+      </div>
+
+      <details>
+        <summary>Editor URL သတ်မှတ်ရန်</summary>
+        <label for="app-url">App URL</label>
+        <input id="app-url" type="url" placeholder="http://localhost:5173/editor" />
+        <button id="save-url" class="secondary" type="button">သိမ်းရန်</button>
+      </details>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
